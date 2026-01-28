@@ -33,7 +33,7 @@ OCI_RUNNER="docker"
 OCI_BUILD="${OCI_RUNNER} build --build-arg UID=$(id -u) --build-arg GID=$(id -g) -t ${IMAGE_NAME} ."
 OCI_RUN="${OCI_RUNNER} run --rm -t -v ${PROJECT_PATH}:/home/luna/${PROJECT_NAME} ${IMAGE_NAME}"
 
-OPENSSL_VERSION=$(grep '^VERSIONS=' ./generate.sh | cut -d '"' -f2)
+OPENSSL_VERSION=$(grep '^VERSIONS=' ./generate.sh | cut -d '"' -f2 | head -n 1)
 OPENSSL_TAR_FILENAME="openssl-${OPENSSL_VERSION}.tar.gz"
 OPENSSL_URL="https://github.com/openssl/openssl/releases/download/openssl-${OPENSSL_VERSION}/${OPENSSL_TAR_FILENAME}"
 

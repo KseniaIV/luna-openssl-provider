@@ -28,7 +28,7 @@
 #include "prov/securitycheck.h"
 #include "prov/seeding.h"
 #ifdef LUNA_OQS
-#include "prov/ecx.h"
+//#include "prov/ecx.h"
 #endif
 
 /* TODO: generated when building openssl */

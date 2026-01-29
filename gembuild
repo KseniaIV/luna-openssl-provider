@@ -1318,7 +1318,7 @@ liboqs_install()
   fi
 
   cd $BASEDIR
-  liboqs="$LIBOQS_PREFIX/liboqs/lib64/liboqs.a"
+  liboqs="$LIBOQS_PREFIX/liboqs/lib/liboqs.a"
   if [ ! -f "$liboqs" ]; then
     log_echo "ERROR: liboqs library was not found at $liboqs.  There was an issue installing it.  See $LOG for details."
     exit 1
